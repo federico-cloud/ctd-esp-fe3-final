@@ -7,8 +7,6 @@ export const Navbar = () => {
 
   const {theme, toggleTheme} = useContext(ThemeContext);
   
-  console.log(theme)
-
   return (
     <nav className={`${theme}`}>
       <Link className="nav__logo" to="/" >Centro medico</Link>
