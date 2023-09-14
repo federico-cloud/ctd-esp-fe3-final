@@ -1,11 +1,7 @@
 .doctorsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
-}
-
-.doctorsContainer > :not(:last-child) {
-  margin-right: auto; /* Empuja los elementos hacia la izquierda */
 }

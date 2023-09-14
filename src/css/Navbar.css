@@ -1,7 +1,6 @@
 nav{
   position: sticky;
   top: 0;
-  background-color: rgba(111, 111, 111, 0.1); /* Color de fondo con opacidad */
   backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque al fondo */
   display: flex;
   margin: 0 auto;
@@ -13,7 +12,6 @@ nav{
 }
 
 .nav__logo{
-  color: var(--main-color);
   text-decoration: none;
   font-size: 40px;
 }
@@ -21,7 +19,6 @@ nav{
 .nav__links-container{
   display: flex;
   justify-content: flex-end;
-  color: var(--main-color);
   margin-right: 20px;
 }
 
@@ -38,5 +35,4 @@ nav{
     -5px -5px 20px var(--main-color),
     5px -5px 20px var(--main-color),
     -5px 5px 20px var(--main-color);
-  color: var(--white);
 }
