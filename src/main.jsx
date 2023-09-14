@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Contacto } from './routes/Contacto'
 import { Details } from './routes/Details'
 import { Favs } from './routes/Favs'
@@ -15,9 +15,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App/>}>
+            <Route path='/' element={<Navigate to={'/home'}/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/contact' element={<Contacto/>}/>
-            <Route path='/details' element={<Details/>}/>
+            <Route path='/details/:id' element={<Details/>}/>
             <Route path='/favourites' element={<Favs/>}/>
             <Route path="*" element={<Notfound/>}/>
           </Route>
