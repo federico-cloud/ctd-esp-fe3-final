@@ -1,5 +1,5 @@
 :root{
-  --main-color: #6f32be;
+  --main-color: #9d52ff;
   --white: #FFF;
   --black: #494848;
 }
@@ -8,10 +8,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .light{
-  color: var(--black);
+  color: var(--dark);
   background-color: var(--white);
 }
 
@@ -28,6 +29,6 @@ body{
 
 h2{
   text-align: center;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   font-size: 48px;
 }
