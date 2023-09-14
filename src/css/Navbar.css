@@ -4,16 +4,21 @@ nav{
   backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque al fondo */
   display: flex;
   margin: 0 auto;
-  height: 8vh;
+  height: 10vh;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
 }
 
+nav > a:visited{
+  color: var(--main-color);
+}
+
 .nav__logo{
   text-decoration: none;
   font-size: 40px;
+  margin-left: 20px;
 }
 
 .nav__links-container{
@@ -29,10 +34,15 @@ nav{
   transition: all ease-in-out 0.5s;
 }
 
+.nav__links-container a:visited {
+  color: var(--main-color);
+}
+
 .nav__links-container a:hover{
   text-shadow: 
     5px 5px 20px var(--main-color),
     -5px -5px 20px var(--main-color),
     5px -5px 20px var(--main-color),
     -5px 5px 20px var(--main-color);
+  color: var(--white);
 }

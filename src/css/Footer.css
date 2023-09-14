@@ -3,8 +3,23 @@ footer{
   margin: 0 auto;
   position: relative;
   bottom: 0;
-  height: 200px;
+  height: 150px;
   width: 100%;
-  margin-bottom: -30vh;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--main-color);
+}
 
+.footer__social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.footer__social img{
+  width: 50px;
+  margin: 0 5px;
+  cursor: pointer;
 }
