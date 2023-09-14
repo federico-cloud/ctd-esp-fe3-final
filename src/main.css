@@ -1,0 +1,33 @@
+:root{
+  --main-color: #6f32be;
+  --white: #FFF;
+  --black: #494848;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.light{
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.dark{
+  color: var(--white);
+  background-color: var(--black);
+}
+
+body{
+  position: relative;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+  text-align: center;
+  margin: 20px;
+  font-size: 48px;
+}
