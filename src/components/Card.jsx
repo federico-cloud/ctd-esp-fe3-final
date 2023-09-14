@@ -1,17 +1,22 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import '../css/Card.css'
+import '../main.css'
+import { Link } from 'react-router-dom';
+import { ThemeContext } from "../context/ThemeContext";
+
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export const Card = ({id, name, city}) => {
 
   const [like, setLike] = useState(false);
+  const { theme } = useContext(ThemeContext)
 
   const addFav = () => {
     setLike(!like)
   }
 
   return (
-    <div className="card">
+    <div className={`card ${theme}`}>
       {/* En cada card deberan mostrar en name - username y el id */}
       <div className='card__content'>
 
@@ -31,14 +36,14 @@ export const Card = ({id, name, city}) => {
         
         {/* Detalles de la card */}
         <div className="card__doctor-details">
-          <span><b>City</b> {city}</span>
-          <span><b>Name</b> {name}</span>
+          <span>Name</span>
+          <p>{name}</p>
+          <span>City</span>
+          <p>{city}</p>
         </div>
 
         {/* Boton para ver mas informacion */}
-        <button className="card__btn-details">More</button>
-        
-  
+        <Link className="card__btn-details" to={`/details/${id}`}>More</Link>  
       </div>
       
 
