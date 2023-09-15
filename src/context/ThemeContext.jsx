@@ -1,25 +1,27 @@
-/* eslint-disable react/prop-types */
-import { createContext, useState } from 'react';
+import { createContext, useState, useMemo, useEffect } from 'react';
 
-
-// Creamos el contexto
 export const ThemeContext = createContext();
 
-// Proveedor del contexto
+// eslint-disable-next-line react/prop-types
 export function ThemeProvider({ children }) {
-  // Intenta obtener el tema del localStorage
-  let localStorageTheme = localStorage.getItem("theme");
-  const [theme, setTheme] = useState(localStorageTheme || 'light'); // Usa el tema del localStorage si está disponible, de lo contrario, usa 'light'
-  // Guardamos el tema actual en el storage
-  localStorage.setItem("theme", theme)
+  // Intenta obtener el tema del localStorage al cargar el componente
+  const localStorageTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(localStorageTheme || 'light');
 
-  // Función para cambiar el tema
+  // Usamos useMemo para memorizar el valor de theme
+  const memorizedTheme = useMemo(() => theme, [theme]);
+
+  // Cuando el tema cambia, actualizamos el localStorage
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: memorizedTheme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
