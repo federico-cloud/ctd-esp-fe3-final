@@ -1,0 +1,47 @@
+.contact{
+  height: 700px;
+}
+
+.form{
+  border: 2px solid var(--main-color);
+  width: 250px;
+  margin: 0 auto;
+  height: 300px;
+  padding: 25px;
+}
+
+.form-data__form-inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-data__form-inputs label{
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.form-data__form-inputs input{
+  height: 30px;
+}
+
+.form button{
+  display: block;
+  height: 44px;
+  width: 80%;
+  margin: 30px auto;
+  background-color: var(--main-color);
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.form button:hover{
+  cursor: pointer;
+}
+
+
+
+
