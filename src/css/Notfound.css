@@ -1,0 +1,21 @@
+.notfound{
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+}
+
+img{
+  margin: 0 auto;
+  object-position: center;
+  width: 30%;
+}
+
+.notfound p{
+  text-align: center;
+  display: inline-block;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 50px;
+  margin-top: 10px;
+}
