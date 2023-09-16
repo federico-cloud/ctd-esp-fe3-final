@@ -12,7 +12,7 @@ export const Home = () => {
   const {data} = useContext(DataContext)
 
   return (
-    <div className={`${theme}`}>
+    <div className={`home ${theme}`}>
       <h2>HOME</h2>
       <div className='doctorsContainer'>
         {data.map((data) => (
