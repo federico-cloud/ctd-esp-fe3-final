@@ -20,7 +20,6 @@ export const Contact = () => {
     const { email, name } = e.target;
   
     const isFormValid = validateForm(email.value, name.value);
-    console.log(isFormValid)
 
     if (!isFormValid) {
       setError(false);
