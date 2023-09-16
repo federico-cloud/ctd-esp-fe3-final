@@ -9,6 +9,7 @@ nav{
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  border-bottom: 2px solid var(--main-color);
 }
 
 nav > a:visited{
@@ -24,12 +25,13 @@ nav > a:visited{
 .nav__links-container{
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin-right: 40px;
+  align-items: center;
 }
 
 .nav__links-container a{
   font-size: 20px;
-  margin: 0 10px;
+  margin: 0 20px;
   text-decoration: none;
   transition: all ease-in-out 0.5s;
 }
@@ -45,4 +47,9 @@ nav > a:visited{
     5px -5px 20px var(--main-color),
     -5px 5px 20px var(--main-color);
   color: var(--white);
+}
+
+button{
+  border: none;
+  cursor: pointer;
 }
